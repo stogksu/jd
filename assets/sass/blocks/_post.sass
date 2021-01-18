@@ -1,0 +1,55 @@
+.post-navigation
+    padding-top: 50px
+.nav-previous
+    position: relative
+    &::before
+        content: url('../img/arrow-left.png')
+        display: block
+        width: 45px
+        height: 75px
+        background-color: #3f5b2c
+        text-align: center
+        padding-top: 21px
+        position: absolute
+        top: 0 
+        left: 0
+    a
+        display: block
+        margin-left: 75px
+        text-decoration: none
+            
+.nav-next
+    position: relative
+    &::after
+        content: url('../img/arrow-right.png')
+        display: block
+        width: 45px
+        height: 75px
+        background-color: #3f5b2c
+        text-align: center
+        padding-top: 21px
+        position: absolute
+        top: 0 
+        right: 0
+    a
+        display: block
+        margin-right: 75px
+        text-decoration: none
+
+.nav-links
+    min-height: 75px
+    .nav-subtitle
+        font-size: 14px
+        font-family: $content-family
+        color: #7d7d7d
+    .nav-title
+        font-size: 17px
+        font-family: $first-family
+        font-weight: 400
+        color: #262626
+
+.single-post
+    .entry-title
+        margin-top: 0
+        text-align: center
+
