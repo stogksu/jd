@@ -16,10 +16,11 @@ h6
     font-size: 13px
 
 hr
-    height: 6px
+    height: 4px
     background-color: #fff
     border-bottom: 1px solid #c1cdb8
     border-top: 1px solid #c1cdb8
+    margin: 0
 
 p
     color: #7d7d7d;
@@ -112,5 +113,24 @@ blockquote
     top: 10px
     bottom: 10px
 
+.wp-block-media-text
+    display: block
+.alignwide
+    .wp-block-media-text__media
+        float: left
+        margin-right: 44px
+        margin-bottom: 20px
+    .wp-block-media-text__content
+        padding: 0
 
-
+.wp-block-media-text
+    display: block
+.has-media-on-the-right
+    .wp-block-media-text__media
+        float: right
+        margin-left: 44px
+        margin-bottom: 20px
+    .wp-block-media-text__content
+        padding: 0
+.wp-block-media-text:after
+    clear: both
