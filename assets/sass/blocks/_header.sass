@@ -29,22 +29,61 @@
         display: flex
         flex-direction: column
         box-shadow: none
+        box-sizing: border-box
         .menu-item
-            background: #3f5b2c
             position: relative
+            background: #3f5b2c
+            &:first-child
+                padding-top: 15px
+            &:last-child
+                padding-bottom: 15px
             a
-                padding: 15px
                 color: white
                 letter-spacing: 2.93px
+                margin: 0 13px
+                border: 1px solid transparent
+                position: relative
+                padding: 10px 5px
+            a:hover
+                border: 1px solid rgba(255, 255, 255, 0.1)
             ul.sub-menu
                 position: absolute
                 top: -10px
                 left: 100%
                 display: none
-                border-left: 10px solid transparent
+                border-left: 5px solid transparent
             &:hover 
                 ul.sub-menu
                     display: block
+.menu
+    .menu-item-has-children 
+        span:after
+            content: url('../img/menu_list.png')
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 0
+
+.sub-menu
+    .menu-item-has-children 
+        span:after
+            content: url('../img/menu_list.png')
+            position: absolute
+            top: 50%
+            transform: translateY(-50%)
+            right: 10px
+    
+.sub-menu 
+    .menu-item-has-children:hover
+        span:after
+            transform: rotate(-90deg)
+            top: 10px
+
+.menu-item-has-children img
+    position: absolute
+    right: 10px
+    top: 50%
+    transform: translateY(-50%)
 
 body.menu-opened
     .site-header::after
@@ -176,7 +215,7 @@ body.menu-opened
     &:hover input[type="search"],
     input[type="search"]:focus,
     input[type="search"]:not([value=""])        
-            opacity: 0.5        
+            opacity: 0.5
 
     input.search-submit
         width: 20px
