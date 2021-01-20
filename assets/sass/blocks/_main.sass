@@ -1,7 +1,6 @@
 .site-main
     width: 670px
     margin: 0 auto
-    padding-bottom: 70px
 
 .read-post
     display: block
@@ -34,8 +33,26 @@
     .post
         margin-top: 0
 
-.post-info
+.post-info 
     margin-bottom: 60px
+    position: relative
+    
+.comment-counter
+    border: 1px solid rgba(125, 125, 125, 0.1)
+    position: absolute
+    display: inline-block
+    padding: 10px
+    top: 80%
+    right: 0
+    opacity: 0.8
+    color: #7d7d7d
+    font-family: $content-family
+    font-size: 14px
+    font-weight: 400
+
+    &:after
+        content: url('../img/chat.png')
+
 
 .link-pagination
     text-align: center
